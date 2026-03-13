@@ -308,12 +308,12 @@ FIREBASE CONFIG
 ================================ */
 
 const firebaseConfig={
-apiKey:"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",
-authDomain:"YOUR_DOMAIN",
+apiKey:"",
+authDomain:"civic-tech-85e10.firebaseapp.com",
 projectId:"civic-tech-85e10",
-storageBucket:"YOUR_BUCKET",
-messagingSenderId:"YOUR_ID",
-appId:"YOUR_APP_ID"
+storageBucket:"civic-tech-85e10.firebasestorage.app",
+messagingSenderId:"143562883566",
+appId:"1:143562883566:web:93ae69beef93406b130eff"
 };
 
 firebase.initializeApp(firebaseConfig);
