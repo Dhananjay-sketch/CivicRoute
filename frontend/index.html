@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -11,29 +10,29 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- Particle Background -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
-<!-- Firebase -->
-
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"></script>
+<!-- Firebase (COMPAT VERSION - REQUIRED FOR YOUR SCRIPT.JS) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage-compat.js"></script>
 
 </head>
+
 
 <body>
 
 <div id="particles-js"></div>
 
-<!-- NAVBAR -->
+
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
 <div class="logo">CivicRoute</div>
 
-<ul>
+<ul class="navLinks">
 
 <li onclick="openSection('homeSection')">Home</li>
 
@@ -51,7 +50,9 @@
 
 </nav>
 
-<!-- HERO -->
+
+
+<!-- ================= HERO ================= -->
 
 <section id="homeSection" class="hero section">
 
@@ -61,7 +62,10 @@
 
 <div class="searchBox">
 
-<input id="searchInput" placeholder="Search legal process...">
+<input
+id="searchInput"
+placeholder="Search legal process..."
+>
 
 <button onclick="searchLaw()">Search</button>
 
@@ -69,45 +73,48 @@
 
 </section>
 
-<!-- FEATURE CARDS -->
+
+
+<!-- ================= FEATURES ================= -->
 
 <section class="features">
 
 <div class="card" onclick="openSection('rightsSection')">
 
 <h3>Know Your Rights</h3>
-
-<p>Understand laws that protect against false accusations.</p>
+<p>Understand laws that protect you.</p>
 
 </div>
+
 
 <div class="card" onclick="openSection('uploadSection')">
 
 <h3>Upload Evidence</h3>
-
 <p>Securely store chats and documents.</p>
 
 </div>
 
+
 <div class="card" onclick="openSection('timelineSection')">
 
 <h3>Legal Timeline</h3>
-
 <p>Track legal procedures step-by-step.</p>
 
 </div>
 
+
 <div class="card" onclick="openSection('assistantSection')">
 
 <h3>AI Case Analyzer</h3>
-
 <p>Analyze your legal situation instantly.</p>
 
 </div>
 
 </section>
 
-<!-- KNOW YOUR RIGHTS -->
+
+
+<!-- ================= KNOW YOUR RIGHTS ================= -->
 
 <section id="rightsSection" class="section hidden">
 
@@ -161,7 +168,9 @@
 
 </section>
 
-<!-- LAW SEARCH RESULTS -->
+
+
+<!-- ================= LAW SEARCH RESULTS ================= -->
 
 <section id="lawResults" class="section hidden">
 
@@ -171,7 +180,9 @@
 
 </section>
 
-<!-- LEGAL TIMELINE -->
+
+
+<!-- ================= LEGAL TIMELINE ================= -->
 
 <section id="timelineSection" class="section hidden">
 
@@ -181,7 +192,9 @@
 
 </section>
 
-<!-- CASE ANALYZER -->
+
+
+<!-- ================= AI CASE ANALYZER ================= -->
 
 <section id="assistantSection" class="section hidden">
 
@@ -194,10 +207,11 @@
 <input
 id="caseInput"
 placeholder="Example: I lost my driving licence"
-
 >
 
-<button onclick="analyzeCase()">Analyze Case</button>
+<button onclick="analyzeCase()">
+Analyze Case
+</button>
 
 </div>
 
@@ -205,7 +219,9 @@ placeholder="Example: I lost my driving licence"
 
 </section>
 
-<!-- EVIDENCE UPLOAD -->
+
+
+<!-- ================= EVIDENCE UPLOAD ================= -->
 
 <section id="uploadSection" class="section hidden">
 
@@ -219,10 +235,11 @@ placeholder="Example: I lost my driving licence"
 type="text"
 id="caseIdInput"
 placeholder="Enter Case ID"
-
 >
 
-<button onclick="uploadEvidence()">Upload Evidence</button>
+<button onclick="uploadEvidence()">
+Upload Evidence
+</button>
 
 <div id="preview"></div>
 
@@ -230,7 +247,9 @@ placeholder="Enter Case ID"
 
 </section>
 
-<!-- CASE DASHBOARD -->
+
+
+<!-- ================= CASE DASHBOARD ================= -->
 
 <section id="dashboardSection" class="section hidden">
 
@@ -240,7 +259,11 @@ placeholder="Enter Case ID"
 
 </section>
 
-<script src="script.js"></script>
+
+
+<!-- ================= MAIN SCRIPT ================= -->
+
+<script src="script.js" defer></script>
 
 </body>
 

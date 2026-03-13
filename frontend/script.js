@@ -308,7 +308,7 @@ FIREBASE CONFIG
 ================================ */
 
 const firebaseConfig={
-apiKey:"",
+apiKey:"AIzaSyAVXzC1XYnndi5qfkX14ZPrkPd1ICkzvZE",
 authDomain:"civic-tech-85e10.firebaseapp.com",
 projectId:"civic-tech-85e10",
 storageBucket:"civic-tech-85e10.firebasestorage.app",
