@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CivicRoute</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">CivicRoute</div>
+
+<ul>
+
+<li onclick="openSection('homeSection')">Home</li>
+
+<li onclick="openSection('rightsSection')">Know Your Rights</li>
+
+<li onclick="openSection('assistantSection')">Case Analyzer</li>
+
+<li onclick="openSection('timelineSection')">Timeline</li>
+
+<li onclick="openSection('dashboardSection')">Dashboard</li>
+
+</ul>
+
+<button id="themeToggle">🌙</button>
+
+</nav>
+
+<!-- HERO -->
+
+<section id="homeSection" class="hero section">
+
+<h1>Protect Yourself From False Accusations</h1>
+
+<p>Know your legal rights and secure your evidence.</p>
+
+<div class="searchBox">
+
+<input id="searchInput" placeholder="Search legal process...">
+
+<button onclick="searchLaw()">Search</button>
+
+</div>
+
+</section>
+
+<!-- FEATURE CARDS -->
+
+<section class="features">
+
+<div class="card" onclick="openSection('rightsSection')">
+
+<h3>Know Your Rights</h3>
+
+<p>Understand laws that protect against false accusations.</p>
+
+</div>
+
+<div class="card" onclick="openSection('uploadSection')">
+
+<h3>Upload Evidence</h3>
+
+<p>Securely store chats and documents.</p>
+
+</div>
+
+<div class="card" onclick="openSection('timelineSection')">
+
+<h3>Legal Timeline</h3>
+
+<p>Track legal procedures step-by-step.</p>
+
+</div>
+
+<div class="card" onclick="openSection('assistantSection')">
+
+<h3>AI Case Analyzer</h3>
+
+<p>Analyze your legal situation instantly.</p>
+
+</div>
+
+</section>
+
+<!-- KNOW YOUR RIGHTS -->
+
+<section id="rightsSection" class="section hidden">
+
+<h2>Know Your Rights</h2>
+
+<div class="rightsContainer">
+
+<div class="card">
+<h3>Right to Remain Silent</h3>
+<p>You cannot be forced to confess or self-incriminate.</p>
+</div>
+
+<div class="card">
+<h3>Right to Legal Representation</h3>
+<p>You have the right to consult a lawyer.</p>
+</div>
+
+<div class="card">
+<h3>Right Against Illegal Arrest</h3>
+<p>Police must provide valid grounds for arrest.</p>
+</div>
+
+<div class="card">
+<h3>Right to Bail</h3>
+<p>Bailable offences allow immediate bail.</p>
+</div>
+
+<div class="card">
+<h3>Right to Medical Examination</h3>
+<p>You may request medical assistance if injured.</p>
+</div>
+
+<div class="card">
+<h3>Right to Free Legal Aid</h3>
+<p>Free legal help is available if you cannot afford a lawyer.</p>
+</div>
+
+</div>
+
+<h3 class="emergencyTitle">Emergency Helplines</h3>
+
+<ul class="helplineList">
+
+<li>Police Emergency — 100</li>
+<li>National Emergency — 112</li>
+<li>Women Helpline — 1091</li>
+<li>Cyber Crime — 1930</li>
+<li>Legal Aid — 15100</li>
+
+</ul>
+
+</section>
+
+<!-- LAW SEARCH RESULTS -->
+
+<section id="lawResults" class="section hidden">
+
+<h2>Legal Process Results</h2>
+
+<div id="results"></div>
+
+</section>
+
+<!-- LEGAL TIMELINE -->
+
+<section id="timelineSection" class="section hidden">
+
+<h2>Legal Timeline</h2>
+
+<div id="timeline" class="timelineContainer"></div>
+
+</section>
+
+<!-- CASE ANALYZER -->
+
+<section id="assistantSection" class="section hidden">
+
+<h2>Legal Case Analyzer</h2>
+
+<p>Describe your legal situation and receive guidance.</p>
+
+<div class="analyzerBox">
+
+<input
+id="caseInput"
+placeholder="Example: I lost my driving licence"
+
+>
+
+<button onclick="analyzeCase()">Analyze Case</button>
+
+</div>
+
+<div id="analysisResult"></div>
+
+</section>
+
+<!-- EVIDENCE UPLOAD -->
+
+<section id="uploadSection" class="section hidden">
+
+<h2>Upload Evidence</h2>
+
+<div class="uploadBox">
+
+<input type="file" id="fileInput">
+
+<input
+type="text"
+id="caseIdInput"
+placeholder="Enter Case ID"
+
+>
+
+<button onclick="uploadEvidence()">Upload Evidence</button>
+
+<div id="preview"></div>
+
+</div>
+
+</section>
+
+<!-- CASE DASHBOARD -->
+
+<section id="dashboardSection" class="section hidden">
+
+<h2>Case Dashboard</h2>
+
+<div id="caseList"></div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
